@@ -6,7 +6,11 @@ package com.example.kotlincollectionstp
 data class Step(var name: String, var debutDate: String, var endDate: String, var distance: Double, var difficulty: Difficulties)
 
 //Q2 Create the data class Result
-data class Result(var time: String, var ranking: Int)
+data class Result(var time: String, var ranking: Int){
+    //Q6
+    data class Finished(var time: String, var ranking: Int)
+    data class GaveUp(var reason: String, var distance: Int)
+}
 
 //Q3 Create the class Cyclist
 class Cyclist(var firstName: String, var lastName:String, var nationality:String, var age:Int){
@@ -24,4 +28,7 @@ class Cyclist(var firstName: String, var lastName:String, var nationality:String
 enum class Difficulties {
     EASY,
     HARD
+}
+
+fun main() {
 }
